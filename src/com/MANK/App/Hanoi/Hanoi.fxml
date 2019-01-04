@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="418.0" prefWidth="600.0" style="-fx-background-radius: 100;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.MANK.App.Hanoi.HanoiDiskController">
+   <children>
+      <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="420.0" prefWidth="600.0" style="-fx-background-radius: 100;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="360.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="30.0" percentHeight="0.0" prefHeight="60.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <children>
+            <Pane fx:id="pane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="280.0" prefWidth="600.0" style="-fx-border-color: #EE0062; -fx-border-width: 4;" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <children>
+                  <Rectangle fx:id="pivot1" arcHeight="5.0" arcWidth="58.0" height="240.0" layoutX="125.0" layoutY="120.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="10.0">
+                     <fill>
+                        <LinearGradient cycleMethod="REFLECT" endX="0.676190451970176" endY="1.0" startY="1.0">
+                           <stops>
+                              <Stop color="#3f474f" />
+                              <Stop color="#d9fce3" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill></Rectangle>
+                  <Rectangle fx:id="pivot2" arcHeight="5.0" arcWidth="58.0" height="240.0" layoutX="300.0" layoutY="120.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="10.0">
+                     <fill>
+                        <LinearGradient cycleMethod="REFLECT" endX="0.676190451970176" endY="1.0" startY="1.0">
+                           <stops>
+                              <Stop color="#3f474f" />
+                              <Stop color="#d9fce3" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill></Rectangle>
+                  <Rectangle fx:id="pivot3" arcHeight="5.0" arcWidth="58.0" height="240.0" layoutX="475.0" layoutY="120.0" stroke="BLACK" strokeDashOffset="333.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="222.0" strokeType="INSIDE" strokeWidth="0.0" width="10.0">
+                     <fill>
+                        <LinearGradient cycleMethod="REFLECT" endX="0.676190451970176" endY="1.0" startY="1.0">
+                           <stops>
+                              <Stop color="#3f474f" />
+                              <Stop color="#d9fce3" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill></Rectangle>
+                  <Rectangle fx:id="disc10" arcHeight="5000.0" arcWidth="23.0" fill="DODGERBLUE" height="20.0" stroke="#4c0510" strokeType="INSIDE" style="-fx-fill: #B30037;" visible="false" width="170.0">
+                     <effect>
+                        <Bloom />
+                     </effect></Rectangle>
+                  <Rectangle fx:id="disc9" arcHeight="5000.0" arcWidth="23.0" fill="DODGERBLUE" height="20.0" stroke="#4c0510" strokeType="INSIDE" style="-fx-fill: #B30037;" visible="false" width="160.0">
+                     <effect>
+                        <Bloom />
+                     </effect></Rectangle>
+                  <Rectangle fx:id="disc8" arcHeight="5000.0" arcWidth="23.0" fill="DODGERBLUE" height="20.0" stroke="#4c0510" strokeType="INSIDE" style="-fx-fill: #B30037;" visible="false" width="150.0">
+                     <effect>
+                        <Bloom />
+                     </effect></Rectangle>
+                  <Rectangle fx:id="disc7" arcHeight="5000.0" arcWidth="23.0" fill="DODGERBLUE" height="20.0" stroke="#4c0510" strokeType="INSIDE" style="-fx-fill: #B30037;" visible="false" width="140.0">
+                     <effect>
+                        <Bloom />
+                     </effect></Rectangle>
+                  <Rectangle fx:id="disc6" arcHeight="5000.0" arcWidth="23.0" fill="DODGERBLUE" height="20.0" stroke="#4c0510" strokeType="INSIDE" style="-fx-fill: #B30037;" visible="false" width="130.0">
+                     <effect>
+                        <Bloom />
+                     </effect></Rectangle>
+                  <Rectangle fx:id="disc5" arcHeight="5000.0" arcWidth="23.0" fill="DODGERBLUE" height="20.0" stroke="#4c0510" strokeType="INSIDE" style="-fx-fill: #B30037;" visible="false" width="120.0">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Rectangle>
+                  <Rectangle fx:id="disc4" arcHeight="5000.0" arcWidth="23.0" fill="DODGERBLUE" height="20.0" stroke="#4c0510" strokeType="INSIDE" style="-fx-fill: #B30037;" visible="false" width="110.0">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Rectangle>
+                  <Rectangle fx:id="disc3" arcHeight="5000.0" arcWidth="23.0" fill="DODGERBLUE" height="20.0" stroke="#4c0510" strokeType="INSIDE" style="-fx-fill: #B30037;" visible="false" width="100.0">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Rectangle>
+                  <Rectangle fx:id="disc2" arcHeight="5000.0" arcWidth="23.0" fill="DODGERBLUE" height="20.0" stroke="#4c0510" strokeType="INSIDE" style="-fx-fill: #B30037;" visible="false" width="90.0">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Rectangle>
+                  <Rectangle fx:id="disc1" arcHeight="5000.0" arcWidth="23.0" fill="DODGERBLUE" height="20.0" stroke="#4c0510" strokeType="INSIDE" style="-fx-fill: #B30037;" visible="false" width="80.0">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Rectangle>
+                  <Rectangle fx:id="disc0" arcHeight="5000.0" arcWidth="23.0" fill="DODGERBLUE" height="20.0" stroke="#4c0510" strokeType="INSIDE" style="-fx-fill: #B30037;" visible="false" width="70.0">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Rectangle>
+                  <Line endX="610.0" fill="#3e161d" layoutY="360.0" stroke="#73000b" strokeType="OUTSIDE" strokeWidth="5.0">
+                     <rotationAxis>
+                        <Point3D />
+                     </rotationAxis>
+                  </Line>
+               </children>
+            </Pane>
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3700B3;" GridPane.rowIndex="1">
+               <children>
+                  <GridPane layoutX="14.0" layoutY="7.0" prefHeight="39.0" prefWidth="573.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.99996439615882" minWidth="10.0" percentWidth="25.0" prefWidth="150.66668701171875" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.99996439615882" minWidth="10.0" percentWidth="25.0" prefWidth="150.66668701171875" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.33333841959632" minWidth="10.0" percentWidth="15.0" prefWidth="178.99997965494788" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.9999440511067" minWidth="10.0" percentWidth="35.0" prefWidth="167.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Button fx:id="Button" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#startButtonPressed" prefHeight="39.0" prefWidth="183.0" style="-fx-background-color: #03DAC5;" text="START" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+                           <effect>
+                              <Glow />
+                           </effect></Button>
+                        <Button fx:id="resumeButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#resumeButtonPressed" prefHeight="39.0" prefWidth="64.0" style="-fx-background-color: #03DAC5;" text="Resume" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                        <Button fx:id="pauseButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#pauseButtonPressed" prefHeight="39.0" prefWidth="64.0" style="-fx-background-color: #03DAC5;" text="Pause" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                        <MenuButton fx:id="ManuBoutton" mnemonicParsing="false" prefHeight="33.0" prefWidth="138.0" text="Disc Number" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <items>
+                              <RadioMenuItem fx:id="num1" mnemonicParsing="false" onAction="#MenuItemSelect" selected="true" text="1">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="DiscNum" />
+                                 </toggleGroup>
+                              </RadioMenuItem>
+                              <RadioMenuItem fx:id="num2" mnemonicParsing="false" onAction="#MenuItemSelect" text="2" toggleGroup="$DiscNum" />
+                              <RadioMenuItem fx:id="num3" mnemonicParsing="false" onAction="#MenuItemSelect" text="3" toggleGroup="$DiscNum" />
+                              <RadioMenuItem fx:id="num4" mnemonicParsing="false" onAction="#MenuItemSelect" text="4" toggleGroup="$DiscNum" />
+                              <RadioMenuItem fx:id="num5" mnemonicParsing="false" onAction="#MenuItemSelect" text="5" toggleGroup="$DiscNum" />
+                              <RadioMenuItem fx:id="num6" mnemonicParsing="false" onAction="#MenuItemSelect" text="6" toggleGroup="$DiscNum" />
+                              <RadioMenuItem fx:id="num7" mnemonicParsing="false" onAction="#MenuItemSelect" text="7" toggleGroup="$DiscNum" />
+                              <RadioMenuItem fx:id="num8" mnemonicParsing="false" onAction="#MenuItemSelect" text="8" toggleGroup="$DiscNum" />
+                              <RadioMenuItem fx:id="num9" mnemonicParsing="false" onAction="#MenuItemSelect" text="9" toggleGroup="$DiscNum" />
+                              <RadioMenuItem fx:id="num10" mnemonicParsing="false" onAction="#MenuItemSelect" text="10" toggleGroup="$DiscNum" />
+                              <RadioMenuItem fx:id="num11" mnemonicParsing="false" onAction="#MenuItemSelect" text="11" toggleGroup="$DiscNum" />
+                           </items>
+                           <graphic>
+                              <TextField fx:id="DiscNumDisplay" alignment="CENTER" prefHeight="25.0" prefWidth="33.0" text="1" />
+                           </graphic>
+                        </MenuButton>
+                        <MenuButton fx:id="ManuBoutton1" mnemonicParsing="false" prefHeight="33.0" prefWidth="129.0" text="Speed" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                           <items>
+                              <RadioMenuItem fx:id="S1" mnemonicParsing="false" onAction="#speedSelect" selected="true" text="0.001 s">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="SpeedGroup" />
+                                 </toggleGroup>
+                              </RadioMenuItem>
+                              <RadioMenuItem fx:id="S2" mnemonicParsing="false" onAction="#speedSelect" text="0.05 s" toggleGroup="$SpeedGroup" />
+                              <RadioMenuItem fx:id="S3" mnemonicParsing="false" onAction="#speedSelect" selected="true" text="0.1 s" toggleGroup="$SpeedGroup" />
+                              <RadioMenuItem fx:id="S4" mnemonicParsing="false" onAction="#speedSelect" text="0.2 s" toggleGroup="$SpeedGroup" />
+                              <RadioMenuItem fx:id="S5" mnemonicParsing="false" onAction="#speedSelect" text="0.5 s" toggleGroup="$SpeedGroup" />
+                              <RadioMenuItem fx:id="S6" mnemonicParsing="false" onAction="#speedSelect" text="1 s" toggleGroup="$SpeedGroup" />
+                           </items>
+                           <graphic>
+                              <TextField fx:id="speedDisplay" alignment="CENTER" prefHeight="25.0" prefWidth="59.0" text="0.100 s" />
+                           </graphic>
+                        </MenuButton>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</VBox>
